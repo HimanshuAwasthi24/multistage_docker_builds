@@ -1,0 +1,18 @@
+Topics=====>
+* Multistage Docker build
+* Distroless Images => A Distroless image has its own run time only
+
+Note: We need Multistage Dockerfiles to reduce size of the Images
+
+********* Lets say we have a calculator app written in python so we start writing docker file   ********
+
+FROM ubuntu
+WORKDIR /app
+RUN basic commands to install python and its dependency 
+COPY . .
+CMD [commands to run this app]
+
+
+In the above Dockerfile why do we need ubuntu as base image we need ubuntu or any OS to run the the python commands only and to run the application hence
+here comes the concept of Multistage docker builds
+See the dockerfile for reference
