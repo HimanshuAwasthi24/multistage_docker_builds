@@ -1,4 +1,4 @@
-#nodejs multistage docker file example
+#nodejs multistage dockerfile example
 
 FROM node:10.17.0 AS build-env
 ADD . /app
